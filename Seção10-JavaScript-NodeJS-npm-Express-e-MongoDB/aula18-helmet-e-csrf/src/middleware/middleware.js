@@ -9,7 +9,7 @@ exports.checkCsrfError = (err, req, resp, next) => {
     }
 };
 
-exports.csrfMiddleware = (req, resp, next) => {
+exports.csrfTokenMiddleware = (req, resp, next) => {
     resp.locals.csrfToken = req.csrfToken();
     next();
 };
